@@ -1,0 +1,49 @@
+{
+  "name": "xcl-language",
+  "displayName": "XCL Language Support",
+  "description": "Provides language support for XCL.",
+  "version": "0.0.1",
+  "publisher": "74c1c9ac-fcfa-61cf-acf8-905cb40bc2ff",
+  "license": "MIT",
+  "repository": "CheezitsAreSuperior/XCL-Extension",
+  
+  "engines": {
+      "vscode": "^1.75.0"
+  },
+  "categories": [
+      "Programming Languages"
+  ],
+  "activationEvents": [
+      "onLanguage:xcl"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+      "languages": [
+          {
+              "id": "xcl",
+              "aliases": ["XCL"],
+              "extensions": [".xcl"],
+              "configuration": "./.vscode/xcl-language-configuration.json"
+          }
+      ],
+      "grammars": [
+          {
+              "language": "xcl",
+              "scopeName": "source.xcl",
+              "path": "./.vscode/xcl.tmLanguage.json"
+          }
+      ],
+      "snippets": [
+          {
+              "language": "xcl",
+              "path": "./snippets/xcl.json"
+          }
+      ]
+  },
+
+
+  "scripts": {
+    "bump-version": "node bump-version.js"
+}
+
+}
